@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Noomo Showcase 动效系统架构总览 - 3D 交互式展示页"
+      content="Noomo Showcase — Art direction motion system concept page"
     />
-    <title>Noomo Showcase — Motion System</title>
+    <title>Noomo Showcase — Art Version</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="cursor" aria-hidden="true"></div>
     <div class="noise" aria-hidden="true"></div>
 
     <header class="site-header">
@@ -27,10 +28,10 @@
         </a>
 
         <nav class="main-nav" aria-label="主导航">
-          <a href="#timeline">Timeline</a>
-          <a href="#scroll">Scroll</a>
-          <a href="#interaction">Interaction</a>
-          <a href="#performance">Performance</a>
+          <a href="#story">Story</a>
+          <a href="#system">System</a>
+          <a href="#motion">Motion</a>
+          <a href="#contact">Contact</a>
         </nav>
 
         <button class="menu-button" aria-label="打开菜单" aria-expanded="false">
@@ -43,8 +44,10 @@
 
     <main id="top">
       <section class="hero">
+        <div class="hero-bg-grid"></div>
         <div class="hero-glow glow-1"></div>
         <div class="hero-glow glow-2"></div>
+
         <div class="container hero-inner">
           <div class="hero-copy reveal">
             <p class="eyebrow">MOTION SYSTEM / 01</p>
@@ -53,12 +56,12 @@
               <span>Showcase</span>
             </h1>
             <p class="lead">
-              以滚动为时间轴，以 3D 为叙事语言。一个由相机、案例石、粒子与声音共同
-              构成的沉浸式作品展示系统。
+              一场由光、时间与材料构成的沉浸式作品展示。它不是单纯的网站，而是一段被
+              3D 空间、图像纹理和滚动节奏编排的空间叙事。
             </p>
             <div class="cta-row">
-              <a href="#timeline" class="primary-btn">
-                Explore system
+              <a href="#story" class="primary-btn">
+                Explore concept
                 <span>↗</span>
               </a>
             </div>
@@ -67,333 +70,194 @@
           <div class="hero-visual reveal">
             <div class="orb orb-a"></div>
             <div class="orb orb-b"></div>
-            <div class="screen-card">
-              <div class="screen-topbar">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="artifact-card">
+              <div class="artifact-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
               </div>
-              <div class="screen-grid">
-                <div class="panel panel-large">
-                  <small>LIVE SCENE</small>
-                  <strong>Spatial motion</strong>
+
+              <div class="artifact-body">
+                <div class="artifact-panel large">
+                  <small>Spatial Story</small>
+                  <strong>Deep motion</strong>
                 </div>
-                <div class="panel panel-small">
-                  <small>STATUS</small>
-                  <strong>Loaded</strong>
-                </div>
-                <div class="panel panel-small">
-                  <small>SPEED</small>
+                <div class="artifact-panel mini">
+                  <small>Speed</small>
                   <strong>1.5x</strong>
                 </div>
-                <div class="panel panel-wide">
-                  <small>CAMERA</small>
-                  <strong>keyframe scrub</strong>
+                <div class="artifact-panel mini">
+                  <small>State</small>
+                  <strong>awake</strong>
+                </div>
+                <div class="artifact-panel wide">
+                  <small>Camera</small>
+                  <strong>scrub keyframe</strong>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <div class="scroll-cue">SCROLL TO DISCOVER <span>↓</span></div>
       </section>
 
-      <section id="timeline" class="section container">
+      <section id="story" class="section container">
         <div class="section-heading reveal">
-          <p class="eyebrow">01 / LOADING & INTRO</p>
+          <p class="eyebrow">01 / STORY</p>
           <h2>
-            加载，揭幕，<br />
-            <span>进入场景。</span>
+            视觉不仅是信息，<br />
+            <span>也是时间。</span>
           </h2>
           <p>
-            从资源加载到第一帧交互，每一个时间点都被精确编排，构成完整的 cinematic
-            opening。
+            作品以无声的节奏来叙事：加载完成后的场景揭幕、相机入场、石块浮动、粒子交错，
+            像一段逐渐浮现的记忆。
           </p>
         </div>
 
-        <div class="timeline-card reveal">
-          <div class="timeline-track">
-            <span class="track-bar"></span>
-            <i class="track-node node-1"></i>
-            <i class="track-node node-2"></i>
-            <i class="track-node node-3"></i>
-            <i class="track-node node-4"></i>
-          </div>
-
-          <div class="timeline-steps">
-            <article>
-              <b>00.00</b>
-              <h3>Asset loading</h3>
-              <p>资源分 9 批加载，进度以 power2.out 平滑追赶。</p>
-            </article>
-            <article>
-              <b>+01.60</b>
-              <h3>Scene reveal</h3>
-              <p>蓝噪声遮罩展开，边缘辉光勾勒出空间轮廓。</p>
-            </article>
-            <article>
-              <b>+01.80</b>
-              <h3>Preloader exit</h3>
-              <p>文本与图形错峰退场，交还视觉舞台。</p>
-            </article>
-            <article>
-              <b>+04.50</b>
-              <h3>Free to scroll</h3>
-              <p>相机、空白石块与 Logo 进入滚动驱动状态。</p>
-            </article>
-          </div>
+        <div class="story-grid reveal">
+          <article class="story-card">
+            <span>01</span>
+            <h3>Reveal</h3>
+            <p>蓝色噪声遮罩与边缘风暴，在第一帧里完成创作的第一次呼吸。</p>
+          </article>
+          <article class="story-card">
+            <span>02</span>
+            <h3>Reframe</h3>
+            <p>相机突破画面边界，以精准位移重新定义空间深度和观看节奏。</p>
+          </article>
+          <article class="story-card">
+            <span>03</span>
+            <h3>Drift</h3>
+            <p>信息元素与环境一起漂移，建立温度、张力和留白，让内容自行呼吸。</p>
+          </article>
         </div>
       </section>
 
-      <section id="scroll" class="section dark-section">
+      <section id="system" class="section dark-section">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="eyebrow">02 / SCROLL DRIVEN</p>
+            <p class="eyebrow">02 / SYSTEM</p>
             <h2>
-              滚动不是导航，<br />
-              <span>而是时间轴。</span>
+              加载、滚动、<br />
+              <span>三重编排。</span>
             </h2>
             <p>
-              页面高度被扩展为 1700vh，DOM 保持安静，所有叙事由 3D 场景承载。
+              页面高度被扩展为 1700vh，DOM 以极简方式存活，真正的戏剧张力来自 3D 场景中的动线配置。
             </p>
           </div>
 
-          <div class="flow reveal">
-            <div class="flow-box">
-              <strong>USER INPUT</strong>
-              <small>Wheel / Touch</small>
-            </div>
-            <span>→</span>
-            <div class="flow-box accent">
-              <strong>SCROLLSMOOTHER</strong>
-              <small>smooth 1.5 · normalizeScroll</small>
-            </div>
-            <span>→</span>
-            <div class="flow-box wide">
-              <strong>THREE SCRUB CHANNELS</strong>
-              <small>Camera keyframes / 9 showcase stones / Logo depth</small>
-            </div>
-          </div>
+          <div class="system-layout">
+            <div class="timeline-col reveal">
+              <div class="track-wrap">
+                <div class="track-bar"></div>
+                <span class="node n1"></span>
+                <span class="node n2"></span>
+                <span class="node n3"></span>
+                <span class="node n4"></span>
+              </div>
 
-          <div class="feature-grid">
-            <article class="reveal">
-              <span>01</span>
-              <h3>Camera choreography</h3>
-              <p>位置、目标与焦距沿 cameraTL8.glb 关键帧同步变化。</p>
-            </article>
-            <article class="reveal">
-              <span>02</span>
-              <h3>Floating stones</h3>
-              <p>案例石以 sine.inOut 错峰浮动，表面播放品牌视频纹理。</p>
-            </article>
-            <article class="reveal">
-              <span>03</span>
-              <h3>Ambient layer</h3>
-              <p>630 个粒子漂移，背景以 fbm 噪声形成持续脉动。</p>
-            </article>
+              <div class="timeline-list">
+                <div>
+                  <b>00.00</b>
+                  <p>Asset loading</p>
+                </div>
+                <div>
+                  <b>+01.60</b>
+                  <p>Scene reveal</p>
+                </div>
+                <div>
+                  <b>+01.80</b>
+                  <p>Preloader exit</p>
+                </div>
+                <div>
+                  <b>+04.50</b>
+                  <p>Free to scroll</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="stack-col reveal">
+              <div class="stack-box">
+                <small>01</small>
+                <h3>Camera choreography</h3>
+                <p>相机沿关键帧路径移动，构成整段作品的主叙事轴。</p>
+              </div>
+              <div class="stack-box">
+                <small>02</small>
+                <h3>Stone motion</h3>
+                <p>案例石以不同节奏漂浮与旋转，用材质与影子拉开层级。</p>
+              </div>
+              <div class="stack-box">
+                <small>03</small>
+                <h3>Ambient field</h3>
+                <p>粒子、噪声与光晕持续工作，像一层在屏幕中呼吸的气息。</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="interaction" class="section container">
+      <section id="motion" class="section container">
         <div class="section-heading reveal">
-          <p class="eyebrow">03 / INTERACTION MATRIX</p>
+          <p class="eyebrow">03 / MOTION</p>
           <h2>
-            每一次移动，<br />
-            <span>都有回应。</span>
+            交互不只是反馈，<br />
+            <span>它是情绪。</span>
           </h2>
         </div>
 
-        <div class="interaction-grid">
-          <article class="interaction-card reveal">
+        <div class="motion-grid">
+          <article class="motion-card reveal">
             <span class="card-icon">✦</span>
-            <h3>Mouse movement</h3>
-            <p>
-              相机以 lerp 0.08 平滑追随，Logo 小球响应鼠标重力，营造轻微视差。
-            </p>
-            <b>LERP 0.08 / FRAME</b>
+            <h3>Mouse flow</h3>
+            <p>相机与 Logo 对鼠标移动做轻微追踪，形成不强烈但很稳定的空间感。</p>
           </article>
-
-          <article class="interaction-card reveal">
+          <article class="motion-card reveal">
             <span class="card-icon">◌</span>
-            <h3>Stone hover</h3>
-            <p>
-              Raycaster 捕捉案例石，蓝色胶囊光标跟随并展示项目名称与跳转链接。
-            </p>
-            <b>POWER3.OUT / 0.35s</b>
+            <h3>Hover focus</h3>
+            <p>案例石出现发光轮廓，光标跟随形成精致的桥接感。</p>
           </article>
-
-          <article class="interaction-card reveal">
+          <article class="motion-card reveal">
             <span class="card-icon">◐</span>
             <h3>Idle mode</h3>
-            <p>
-              闲置 20 秒后切换灰度，任意鼠标动作即时恢复彩色，形成“节能沉浸”微妙效果。
-            </p>
-            <b>ACTIVE-GRAYSCALE</b>
+            <p>静止期间冷色调被柔和收敛，任意动作恢复鲜活的视感。</p>
           </article>
-
-          <article class="interaction-card reveal">
+          <article class="motion-card reveal">
             <span class="card-icon">↗</span>
-            <h3>Audio system</h3>
-            <p>
-              ShowcaseBG.mp3 循环播放，音量淡入淡出，后台自动暂停。
-            </p>
-            <b>GAIN 0 → 0.4 / 1s</b>
+            <h3>Audio heartbeat</h3>
+            <p>音乐像背景中的脉搏，伴随用户留在页面时缓慢增强和收敛。</p>
           </article>
         </div>
       </section>
 
-      <section id="performance" class="section dark-section performance">
-        <div class="container performance-layout">
-          <div class="section-heading reveal">
-            <p class="eyebrow">04 / PERFORMANCE</p>
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <div class="contact-box reveal">
+            <p class="eyebrow">04 / CONTACT</p>
             <h2>
-              沉浸感之外，<br />
-              <span>一切都很轻。</span>
+              希望它不是一页网页，<br />
+              <span>而是一个可被感受的场景。</span>
             </h2>
-          </div>
-
-          <div class="spec-list reveal">
-            <div>
-              <span>RENDER SIZE</span>
-              <strong>1920 × 1080</strong>
-            </div>
-            <div>
-              <span>DEVICE PIXEL RATIO</span>
-              <strong>1.0 locked</strong>
-            </div>
-            <div>
-              <span>MODEL FORMAT</span>
-              <strong>Draco compressed</strong>
-            </div>
-            <div>
-              <span>MOBILE FALLBACK</span>
-              <strong>TintedBloom</strong>
-            </div>
-            <div>
-              <span>ENVIRONMENT</span>
-              <strong>1K HDR map</strong>
-            </div>
+            <a href="#top" class="primary-btn alt">
+              Back to top
+              <span>↑</span>
+            </a>
           </div>
         </div>
-      </section>
-
-      <section class="closing container reveal">
-        <p class="eyebrow">THE END IS A NEW BEGINNING</p>
-        <h2>
-          Ready to enter<br />
-          <span>the scene?</span>
-        </h2>
-        <a href="#top" class="primary-btn alt">
-          Back to top
-          <span>↑</span>
-        </a>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
         <span>NOOMO SHOWCASE</span>
-        <span>Motion system architecture · 2024</span>
+        <span>Art direction concept / 2024</span>
       </div>
     </footer>
 
     <script src="script.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
