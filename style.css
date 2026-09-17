@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="梦兰的个人网站，展示个人简介、技能、项目作品和联系信息。"
+    />
+    <title>梦兰 | Personal Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container nav">
+        <a href="#home" class="brand" aria-label="梦兰首页">
+          <span class="brand-mark">M</span>
+          <span>梦兰</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu">
+          <a href="#about">关于</a>
+          <a href="#experience">经历</a>
+          <a href="#skills">技能</a>
+          <a href="#projects">作品</a>
+          <a href="#contact">联系</a>
+        </div>
+
+        <a href="#contact" class="btn btn-sm">联系我</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Hello，I'm 梦兰</p>
+            <h1>用创意和代码，打造温柔而有力量的数字体验。</h1>
+            <p class="lead">
+              我是一名热爱设计与前端开发的创作者，专注于提升品牌感知、交互体验和产品表达。
+              目前在探索视觉设计、前端工程和用户体验之间的更佳融合。
+            </p>
+
+            <div class="cta-group">
+              <a href="#projects" class="btn">查看作品</a>
+              <a href="#about" class="btn btn-secondary">了解我</a>
+            </div>
+
+            <ul class="meta-list" aria-label="个人亮点">
+              <li><strong>3+</strong><span>年经验</span></li>
+              <li><strong>20+</strong><span>项目</span></li>
+              <li><strong>90%</strong><span>回访率</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="profile-card">
+              <div class="profile-top">
+                <span class="status-dot"></span>
+                <span>Available for work</span>
+              </div>
+
+              <div class="portrait-wrap">
+                <div class="portrait">梦</div>
+              </div>
+
+              <div class="profile-body">
+                <h2>梦兰</h2>
+                <p>UI / UX Designer · Front-end Developer</p>
+              </div>
+
+              <div class="profile-stats">
+                <div>
+                  <span>作品</span>
+                  <strong>24</strong>
+                </div>
+                <div>
+                  <span>参与</span>
+                  <strong>12</strong>
+                </div>
+                <div>
+                  <span>评分</span>
+                  <strong>4.9</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">关于我</p>
+            <h2>我相信，好的设计能让内容更有温度，好的体验让品牌更有力量。</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-panel reveal">
+              <h3>我的理念</h3>
+              <p>
+                以用户为中心，兼顾审美表达和功能清晰度。我更关注内容的情绪、节奏和信息结构，
+                把复杂问题转化成自然、易懂和有记忆点的体验。
+              </p>
+            </div>
+            <div class="about-panel reveal">
+              <h3>擅长方向</h3>
+              <p>
+                视觉设计、品牌页、产品界面、前端实现、互动原型和用户旅程优化。擅长把想法落地成
+                既美观又实用的页面体验。
+              </p>
+            </div>
+            <div class="about-panel reveal">
+              <h3>工作方式</h3>
+              <p>
+                从目标拆解、信息架构到视觉落地，保持高效沟通与细节控制，确保每个页面都兼顾品牌
+                气质与使用效率。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section muted">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">经历</p>
+            <h2>从创意探索到数字产品落地</h2>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <span class="year">2021</span>
+              <div class="timeline-content">
+                <h3>独立设计师 / 前端实践者</h3>
+                <p>开始为个人品牌、创作者和小型业务做视觉设计与网站搭建，专注品牌表达和页面体验。</p>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <span class="year">2022</span>
+              <div class="timeline-content">
+                <h3>产品与页面设计</h3>
+                <p>参与多个品牌网站、落地页、活动页与用户界面设计，提升视觉统一性和转化效率。</p>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <span class="year">2024</span>
+              <div class="timeline-content">
+                <h3>前端开发与创作协作</h3>
+                <p>将设计稿转化为可运行网页，持续提高交互细节、用户反馈与页面性能表现。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">技能</p>
+            <h2>在设计与实现之间保持平衡</h2>
+          </div>
+
+          <div class="skills-wrapper">
+            <div class="skill-card reveal">
+              <h3>设计</h3>
+              <div class="tag-list">
+                <span>UI Design</span>
+                <span>UX Research</span>
+                <span>Brand Visual</span>
+                <span>Figma</span>
+              </div>
+            </div>
+
+            <div class="skill-card reveal">
+              <h3>前端</h3>
+              <div class="tag-list">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Responsive</span>
+              </div>
+            </div>
+
+            <div class="skill-card reveal">
+              <h3>协作</h3>
+              <div class="tag-list">
+                <span>沟通</span>
+                <span>原型</span>
+                <span>迭代</span>
+                <span>规划</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section muted">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">作品</p>
+            <h2>精选案例</h2>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <div class="project-visual project-one"></div>
+              <div class="project-body">
+                <span class="project-tag">品牌网站</span>
+                <h3>梦境系列品牌站</h3>
+                <p>以柔和色彩和层次结构打造品牌故事页，提升识别与情感连接。</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-visual project-two"></div>
+              <div class="project-body">
+                <span class="project-tag">产品页</span>
+                <h3>创作者社区平台</h3>
+                <p>围绕社群互动与内容展示进行重新设计，提升信息筛选效率和用户停留感。</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-visual project-three"></div>
+              <div class="project-body">
+                <span class="project-tag">活动页</span>
+                <h3>节日主题活动落地页</h3>
+                <p>强调节奏感和视觉冲击，结合动画与布局提升活动传播效果。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="container contact-wrap reveal">
+          <div>
+            <p class="eyebrow">联系我</p>
+            <h2>欢迎聊聊你的品牌、项目或想法。</h2>
+          </div>
+
+          <div class="contact-card">
+            <a href="mailto:hello@menglan.studio">hello@menglan.studio</a>
+            <p>如果你正在寻找一个兼顾设计感与实现能力的人，我很乐意和你交流。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> 梦兰</p>
+        <p>Made with heart and code.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
+},{
