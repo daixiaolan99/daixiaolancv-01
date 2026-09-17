@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Noomo Showcase 动效系统架构总览" />
+  <title>Noomo Showcase — Motion System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <a class="logo" href="#top"><span class="logo-dot"></span>NOOMO</a>
+    <nav><a href="#timeline">Timeline</a><a href="#scroll">Scroll</a><a href="#interaction">Interaction</a><a href="#performance">Performance</a></nav>
+    <button class="menu-button" aria-label="打开菜单"><span></span><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+      <div class="container hero-content reveal">
+        <p class="kicker">MOTION SYSTEM / 01</p>
+        <h1>Noomo<br /><em>Showcase</em></h1>
+        <p class="hero-copy">以滚动为时间轴，以 3D 为叙事语言。一个由相机、案例石、粒子与声音共同构成的沉浸式作品展示系统。</p>
+        <a class="primary-button" href="#timeline">Explore system <span>↗</span></a>
+      </div>
+      <div class="scroll-cue">SCROLL TO DISCOVER <span>↓</span></div>
+    </section>
+
+    <section id="timeline" class="section container">
+      <div class="section-heading reveal"><p class="kicker">01 / LOADING & INTRO</p><h2>加载，揭幕，<br /><span>进入场景。</span></h2><p>从资源加载到第一帧交互，每一个时间点都被精确编排。</p></div>
+      <div class="timeline-card reveal">
+        <div class="timeline-line"><span class="progress-line"></span><i></i><i></i><i></i><i></i></div>
+        <div class="timeline-steps"><article><b>00.00</b><h3>Asset loading</h3><p>资源分 9 批加载，进度以 power2.out 平滑追赶。</p></article><article><b>+01.60</b><h3>Scene reveal</h3><p>蓝噪声遮罩展开，边缘辉光勾勒出空间轮廓。</p></article><article><b>+01.80</b><h3>Preloader exit</h3><p>文本、图形错峰退场，交还视觉舞台。</p></article><article><b>+04.50</b><h3>Free to scroll</h3><p>相机、案例与 Logo 进入滚动驱动状态。</p></article></div>
+      </div>
+    </section>
+
+    <section id="scroll" class="section dark-section"><div class="container">
+      <div class="section-heading reveal"><p class="kicker">02 / SCROLL DRIVEN</p><h2>滚动不是导航，<br /><span>而是时间轴。</span></h2><p>页面高度被扩展为 1700vh，DOM 保持安静，所有叙事由 3D 场景承载。</p></div>
+      <div class="flow reveal"><div class="flow-box"><strong>USER INPUT</strong><small>Wheel / Touch</small></div><span>→</span><div class="flow-box accent"><strong>SCROLLSMOOTHER</strong><small>smooth 1.5 · normalizeScroll</small></div><span>→</span><div class="flow-box wide"><strong>THREE SCRUB CHANNELS</strong><small>Camera keyframes　/　9 showcase stones　/　Logo depth</small></div></div>
+      <div class="feature-grid"><article><span>01</span><h3>Camera choreography</h3><p>位置、目标与焦距沿 cameraTL8.glb 关键帧同步变化。</p></article><article><span>02</span><h3>Floating stones</h3><p>案例石以 sine.inOut 错峰浮动，表面播放品牌视频纹理。</p></article><article><span>03</span><h3>Ambient layer</h3><p>630 个粒子漂移，背景以 fbm 噪声形成持续脉动。</p></article></div>
+    </div></section>
+
+    <section id="interaction" class="section container"><div class="section-heading reveal"><p class="kicker">03 / INTERACTION MATRIX</p><h2>每一次移动，<br /><span>都有回应。</span></h2></div><div class="interaction-grid">
+      <article class="interaction-card reveal"><span class="card-icon">✦</span><h3>Mouse movement</h3><p>相机以 lerp 0.08 平滑追随，Logo 小球响应鼠标重力，营造轻微视差。</p><b>LERP 0.08 / FRAME</b></article>
+      <article class="interaction-card reveal"><span class="card-icon">◌</span><h3>Stone hover</h3><p>Raycaster 捕捉案例石，蓝色胶囊光标跟随并展示项目名称与跳转链接。</p><b>POWER3.OUT / 0.35s</b></article>
+      <article class="interaction-card reveal"><span class="card-icon">◐</span><h3>Idle mode</h3><p>闲置 20 秒后切换灰度，任意鼠标动作即时恢复彩色。</p><b>ACTIVE-GRAYSCALE</b></article>
+      <article class="interaction-card reveal"><span class="card-icon">↗</span><h3>Audio system</h3><p>ShowcaseBG.mp3 循环播放，音量淡入淡出，后台自动暂停。</p><b>GAIN 0 → 0.4 / 1s</b></article>
+    </div></section>
+
+    <section id="performance" class="section dark-section performance"><div class="container performance-layout"><div class="section-heading reveal"><p class="kicker">04 / PERFORMANCE</p><h2>沉浸感之外，<br /><span>一切都很轻。</span></h2></div><div class="spec-list reveal"><div><span>RENDER SIZE</span><strong>1920 × 1080</strong></div><div><span>DEVICE PIXEL RATIO</span><strong>1.0 locked</strong></div><div><span>MODEL FORMAT</span><strong>Draco compressed</strong></div><div><span>MOBILE FALLBACK</span><strong>TintedBloom</strong></div><div><span>ENVIRONMENT</span><strong>1K HDR map</strong></div></div></div></section>
+
+    <section class="closing container reveal"><p class="kicker">THE END IS A NEW BEGINNING</p><h2>Ready to enter<br /><em>the scene?</em></h2><a class="primary-button" href="#top">Back to top <span>↑</span></a></section>
+  </main>
+  <footer><div class="container"><span>NOOMO SHOWCASE</span><span>Motion system architecture · 2024</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
